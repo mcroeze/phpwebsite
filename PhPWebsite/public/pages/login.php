@@ -15,12 +15,12 @@
   <?php include('../database/errors.php'); ?>
     <div class="iconContainer">
       <i class="fa fa-user icon"></i>
-      <input type="text" name="username" placeholder="Je gebruikersnaam hier.." style="padding-left: 40px;">
+      <input type="text" name="cusername" placeholder="Je gebruikersnaam hier.." style="padding-left: 40px;">
     </div> 
 
     <div class="iconContainer">
     <i class="fa fa-key icon"></i>
-    <input type="password" name="password" placeholder="Je wachtwoord hier..">
+    <input type="password" name="cpassword" placeholder="Je wachtwoord hier..">
     </div>
   
     <input type="submit" value="Inloggen" name="login_user">

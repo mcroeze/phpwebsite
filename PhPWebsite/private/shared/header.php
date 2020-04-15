@@ -23,7 +23,7 @@ if(!isset($page_title)) { $page_title = 'Website'; }
 <nav>
 
     <div class="logo">
-        <a href="<?php echo url_for('pages/home.php'); ?>"><h4>Festival Site</h4></a>
+        <a href="<?php echo url_for('pages/home.php'); ?>">Festival Site</a>
     </div>
 
     <img src="../../public/images/light.png" onclick="myFunction()" class="image_dark_mode">  
@@ -34,9 +34,9 @@ if(!isset($page_title)) { $page_title = 'Website'; }
         <li><a href="<?php echo url_for('pages/profile.php'); ?>">Profile</a></li>
         
         <?php
-        if(isset($_SESSION['username'])) {
+        if(isset($_SESSION['cusername'])) {
             echo "<div class=dropdown>";
-            echo "<li class=navwhite>".$_SESSION['username']."</li>";
+            echo "<li class=navwhite>".$_SESSION['cusername']."</li>";
             echo "<div class=dropdown-content>";
             echo "<a href=\"../../public/database/logout_page.php\">Uitloggen</a>";
         }

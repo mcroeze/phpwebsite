@@ -19,28 +19,56 @@
     <div class="iconContainer">
       <i class="fa fa-user icon"></i>
 
-      <input type="text" name="username" placeholder="Je gebruikersnaam hier.." style="padding-left: 40px;">
+      <input type="text" name="cusername" placeholder="Je gebruikersnaam hier.." style="padding-left: 40px;">
+    </div>
+
+    <label for="input-group"></label>
+    <div class="iconContainer">
+      <i class="fa fa-user icon"></i>
+
+      <input type="text" name="cfirstname" placeholder="Je voornaam hier.." style="padding-left: 40px;">
+    </div>
+
+    <label for="input-group"></label>
+    <div class="iconContainer">
+      <i class="fa fa-user icon"></i>
+
+      <input type="text" name="clastname" placeholder="Je achternaam hier.." style="padding-left: 40px;">
+    </div>
+
+    <label for="input-group"></label>
+    <div class="iconContainer">
+      <i class="fa fa-user icon"></i>
+
+      <input type="text" name="cadress" placeholder="Je adress hier.." style="padding-left: 40px;">
+    </div>
+
+    <label for="input-group"></label>
+    <div class="iconContainer">
+      <i class="fa fa-user icon"></i>
+
+      <input type="text" name="cphonenumber" placeholder="Je telefoonnummer hier.." style="padding-left: 40px;">
     </div>
 
     <label for="input-group"></label>
     <div class="iconContainer">
       <i class="fa fa-envelope icon"></i>
 
-      <input type="email" name="email" placeholder="Je e-mail hier..">
+      <input type="email" name="cemail" placeholder="Je e-mail hier..">
     </div>
 
     <label for="input-group"></label>
     <div class="iconContainer">
     <i class="fa fa-key icon"></i>
 
-    <input type="password" name="password_1" placeholder="Je wachtwoord hier..">
+    <input type="password" name="cpassword_1" placeholder="Je wachtwoord hier..">
     </div>
 
     <label for="input-group"></label>
     <div class="iconContainer">
     <i class="fa fa-key icon"></i>
 
-    <input type="password"  name="password_2" placeholder="Herhaal je wachtwoord...">
+    <input type="password"  name="cpassword_2" placeholder="Herhaal je wachtwoord...">
     </div>
   
     <input type="submit" name="reg_user" value="Registreren">
