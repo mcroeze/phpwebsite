@@ -8,41 +8,43 @@
 
 <div id="content" class="login">
 
-<div class="inloggen">
-    <h1 class="loginh1">Inloggen</h1>
-    <p class="loginp">Vul je gegevens in om in te loggen</p>
-  <form method="post" action="login.php"> 
-  <?php include('../database/errors.php'); ?>
-    <div class="iconContainer">
-      <i class="fa fa-user icon"></i>
-      <input type="text" name="cusername" placeholder="Je gebruikersnaam hier.." style="padding-left: 40px;">
-    </div> 
+  <div class="inloggen">
+      <h1 class="loginh1">Inloggen</h1>
+      <p class="loginp">Vul je gegevens in om in te loggen</p>
 
-    <div class="iconContainer">
-    <i class="fa fa-key icon"></i>
-    <input type="password" name="cpassword" placeholder="Je wachtwoord hier..">
-    </div>
-  
-    <input type="submit" value="Inloggen" name="login_user">
+    <form method="post" action="login.php"> 
+      <?php include('../database/errors.php'); ?>
+        <div class="iconContainer">
+          <i class="fa fa-user icon"></i>
+          <input type="text" name="cusername" placeholder="Je gebruikersnaam hier.." style="padding-left: 40px;">
+        </div> 
 
-    <p class="wwvergeten"><a href="<?php echo url_for('contact.php'); ?>">Wachtwoord vergeten?<a></p>
+        <div class="iconContainer">
+        <i class="fa fa-key icon"></i>
+        <input type="password" name="cpassword" placeholder="Je wachtwoord hier..">
+        </div>
+      
+        <input type="submit" value="Inloggen" name="login_user">
+
+        <p class="wwvergeten"><a href="<?php echo url_for('contact.php'); ?>">Wachtwoord vergeten?<a></p>
     </form>
-</div>
+
+  </div>
 
 </div>
 
-<div id="content2" class="register">
+  <div id="content2" class="register">
 
-<div class="registreren">
-<p class="registerp">Heb je nog geen festival account?</p>
+    <div class="registreren">
+    <p class="registerp">Heb je nog geen festival account?</p>
 
-<form action="<?php echo url_for('pages/register.php'); ?>">
-  <button class="buttonRegister">REGISTREER</button>
-</form>
+    <form action="<?php echo url_for('pages/register.php'); ?>">
+      <button class="buttonRegister">REGISTREER</button>
+    </form>
 
 
-</div>
+    </div>
 
-</div>
+  </div>
 
 <?php include('../../private/shared/footer.php'); ?>

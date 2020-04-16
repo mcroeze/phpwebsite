@@ -9,12 +9,13 @@ require('../../private/functionsDB.php');
 $query = "SELECT * FROM gebruikers AND orders";
 $resultaat = mysqli_query($db, $query);
 
-if(isset($_SESSION['cusername']))
-{
-    $usersData = getUserData(getId($_SESSION['cusername']));
-    $ticketData = getOrders($_SESSION['cusername']);
-    $ticketDatum = getDatum($_SESSION['cusername']);
-}
+    if(isset($_SESSION['cusername']))
+    {
+        $usersData = getUserData(getId($_SESSION['cusername']));
+        $ticketData = getOrders($_SESSION['cusername']);
+        $ticketDatum = getDatum($_SESSION['cusername']);
+    }
+
 ?>
 
 
@@ -23,6 +24,7 @@ if(isset($_SESSION['cusername']))
 <?php
 if(isset($_SESSION['cusername'])) {
 ?>
+
 <div id=container>
 
 <h2>Mijn gegevens</h2>
@@ -56,10 +58,10 @@ if(isset($_SESSION['cusername'])) {
 
         <a class=wijzigingslink href=account_change.php>Wijzig mijn gegevens</a>
 
-<h2 id=h2bestellingen>Mijn bestellingen</h2>
+    <h2 id=h2bestellingen>Mijn bestellingen</h2>
 <?php 
-foreach($ticketData as $ticket){?>
-<table class="table table-bordered" id=resultaten class=tableLicht>
+    foreach($ticketData as $ticket){?>
+        <table style="float: left;" class="table table-bordered" id=resultaten class=tableLicht>
                     <tr>
                         <td><p><b>Ticket: </b></p>
                         <td><p><?php echo $ticket->item_name; ?></p></td>
@@ -72,7 +74,7 @@ foreach($ticketData as $ticket){?>
 
                     <tr>
                         <td><p><b>Prijs: </b</p></td>
-                        <td><p><?php echo $ticket->item_price * $ticket->item_quantity; ?></p></td>
+                        <td><p><?php echo "€ " . $ticket->item_price * $ticket->item_quantity . "-,"; ?></p></td>
                     </tr>
 
                     <tr>
@@ -82,7 +84,9 @@ foreach($ticketData as $ticket){?>
 
         </table>
 <?php } ?>
+
 </div>
+
 <?php
 }  else {
 	echo "<h1>Je moet eerst inloggen om je account gegevens te kunnen inzien</h1>";

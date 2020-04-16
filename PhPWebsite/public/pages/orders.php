@@ -11,10 +11,10 @@ if(isset($_POST)){
 
     header("Location: profile.php");
     exit;
-}else{
-    echo "fout";
-    // header("Location: profile.php");
-    // exit;
+} 
+
+else {
+    echo "Er is iets fout gegaan";
 }
 ?>
 

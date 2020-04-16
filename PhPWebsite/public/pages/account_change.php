@@ -3,7 +3,6 @@
 <?php $page_title = "Account Change" ?>
 <?php include('../../private/shared/header.php'); ?>
 
-
 <link rel="stylesheet" type="text/css" href="<?php echo url_for('stylesheets/main.css'); ?>">
 
 <?php
@@ -52,6 +51,9 @@ if(isset($_SESSION['cusername']))
 }
 ?>
 
+<?php 
+if(isset($_SESSION['cusername'])) {
+?>
 
 <div id="container">
 
@@ -113,3 +115,9 @@ if(isset($_SESSION['cusername']))
 </div>
 
 </div>
+
+<?php 
+} else {
+  echo "<h1>Je moet eerst nog inloggen</h1>";
+}
+?>

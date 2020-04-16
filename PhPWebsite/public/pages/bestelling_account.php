@@ -106,7 +106,7 @@ echo "<!DOCTYPE html>
 				echo "
 			<div style='clear:both'></div>
 			<br />
-			<h3>Order Details</h3>
+			<h3>Bestelling Gegevens</h3>
 			<div class='table-responsive'>
 				<table class='table table-bordered'>
 					<tr>

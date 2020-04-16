@@ -6,5 +6,4 @@
     </div>
 <?php  endif ?>
 
-<?php // Fix kleur '*' dat rood word // ?>
 

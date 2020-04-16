@@ -5,80 +5,80 @@
 
 <link rel="stylesheet" type="text/css" href="<?php echo url_for('stylesheets/main.css'); ?>">
 
-<div id="container">
+  <div id="container">
 
-<div class="slideshow-container">
+    <div class="slideshow-container">
 
-<div class="mySlides fade">
-  <img src="../images/1.jpg" style="width:100%">
-  <div class="text">Graafschap Festival 2020</div>
-</div>
+    <div class="mySlides fade">
+      <img src="../images/1.jpg" style="width:100%">
+      <div class="text">Graafschap Festival 2020</div>
+    </div>
 
-<div class="mySlides fade">
-  <img src="../images/2.jpg" style="width:100%">
-  <div class="text">Graafschap Festival 2019</div>
-</div>
+    <div class="mySlides fade">
+      <img src="../images/2.jpg" style="width:100%">
+      <div class="text">Graafschap Festival 2019</div>
+    </div>
 
-<div class="mySlides fade">
-  <img src="../images/3.jpg" style="width:100%">
-  <div class="text">Graafschap Festival 2018</div>
-</div>
+    <div class="mySlides fade">
+      <img src="../images/3.jpg" style="width:100%">
+      <div class="text">Graafschap Festival 2018</div>
+    </div>
 
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-</div>
-<br>
+    </div>
+    <br>
 
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
 
-<img class="TicketAF2" src="../images/Ticket1.png" alt="Ticketlos">
-<p class="TicketNaam1">Premium</p>
-<img class="TicketAF3" src="../images/Ticket1.png" alt="Ticketlos">
-<p class="TicketNaam2">Basic</p>
-<img class="TicketAF4" src="../images/Ticket1.png" alt="Ticketlos">
-<p class="TicketNaam3">Vips</p>
+    <img class="TicketAF2" src="../images/Ticket1.png" alt="Ticketlos">
+    <p class="TicketNaam1">Premium</p>
+    <img class="TicketAF3" src="../images/Ticket1.png" alt="Ticketlos">
+    <p class="TicketNaam2">Basic</p>
+    <img class="TicketAF4" src="../images/Ticket1.png" alt="Ticketlos">
+    <p class="TicketNaam3">Vips</p>
 
-<div id="contentTicket1" class="CT1"> </div>
-<div id="contentTicket2" class="CT2"> </div>
-<div id="contentTicket3" class="CT3"> </div>
+    <div id="contentTicket1" class="CT1"> </div>
+    <div id="contentTicket2" class="CT2"> </div>
+    <div id="contentTicket3" class="CT3"> </div>
 
-<p class="TicketTekst1">
-    Premium<br> <br>
+    <p class="TicketTekst1">
+        Premium<br> <br>
 
-- 35 Munten aan consumptie<br>
-- Toegang tot het festival<br>
-- Speciale front-row plaatsen<br>
-- 50% korting op alles<br>
-<br>
-€ 60-,
-</p>
+    - 35 Munten aan consumptie<br>
+    - Toegang tot het festival<br>
+    - Speciale front-row plaatsen<br>
+    - 50% korting op alles<br>
+    <br>
+    € 60-,
+    </p>
 
-<p class="TicketTekst2">
-Basic<br> <br>
+    <p class="TicketTekst2">
+    Basic<br> <br>
 
-- 10 Munten aan consumptie<br>
-- Toegang tot het festival<br>
-<br>
-€ 40-,
-</p>
+    - 10 Munten aan consumptie<br>
+    - Toegang tot het festival<br>
+    <br>
+    € 40-,
+    </p>
 
-<p class="TicketTekst3">
-Vips<br> <br>
+    <p class="TicketTekst3">
+    Vips<br> <br>
 
-- 50 Munten aan consumptie<br>
-- Toegang tot het festival<br>
--Meet & Greet met artiesten<br>
-- 60% korting op alles<br>
-<br>
-€ 100-,
-</p>
+    - 50 Munten aan consumptie<br>
+    - Toegang tot het festival<br>
+    -Meet & Greet met artiesten<br>
+    - 60% korting op alles<br>
+    <br>
+    € 100-,
+    </p>
 
-</div>
+  </div>
 
 <form action='bestelling_account.php'>
     <button class='buttonBestel'>Bestel hier je Tickets!</button>

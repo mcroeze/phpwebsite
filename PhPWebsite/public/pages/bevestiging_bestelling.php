@@ -92,15 +92,17 @@ if(isset($_GET["action"]))
 					</tr>
                 </table>
 
-			<h3>Order Details</h3>
+			<h3>Bestelling Gegevens</h3>
 			<div class="table-responsive">
 				<table class="table table-bordered">
+
 					<tr>
 						<th width="40%">Ticket Naam</th>
 						<th width="10%">Aantal</th>
 						<th width="20%">Prijs</th>
 						<th width="15%">Totaal</th>
 					</tr>
+
 					<?php
 					if(!empty($_SESSION["shopping_cart"]))
 					{
@@ -108,38 +110,40 @@ if(isset($_GET["action"]))
 						foreach($_SESSION["shopping_cart"] as $keys => $values)
 						{
 					?>
+
 					<tr>
 						<td><?php echo $values["item_name"]; ?></td>
 						<td><?php echo $values["item_quantity"]; ?></td>
 						<td>€ <?php echo $values["item_price"]; ?></td>
 						<td>€ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2);?></td>
 					</tr>
+
 					<?php
-							$total = $total + ($values["item_quantity"] * $values["item_price"]);
-						}
+						$total = $total + ($values["item_quantity"] * $values["item_price"]);
+					}
 					?>
+
 					<tr>
                         <td>Totaal</td>
                         <td></td>
                         <td></td>
 						<td>€ <?php echo number_format($total, 2); ?></td>
 					</tr>
+
 					<?php
-					}
+						}
                     ?>
                     
                 </table>
+			</div>
+
 				<form method="post" action="orders.php">
-				<input type="submit" class="wijzigingslink" value="Bevestig Bestelling" style="
-    max-width: 10%;
-">
-					
+					<input type="submit" class="wijzigingslink" value="Bevestig Bestelling" style="max-width: 10%;">
 				</form>
-   <?php              
-}  else {
+<?php              
+}  
+
+else {
      echo "<h1>Je moet eerst inloggen om tickets te bestellen</h1>";
 }
-
-// SELECT * FROM orders WHERE userID = 'cid'
 ?>     
-            </div>

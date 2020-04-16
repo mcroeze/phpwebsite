@@ -1,5 +1,6 @@
 <?php
 
+//Krijgt de data van gebruikers uit de database van de betreffende ID
 function getUserData($id)
 {
     $db = mysqli_connect('localhost', 'festivaluser', 'tsdf8E6f', 'festival');
@@ -20,7 +21,7 @@ function getUserData($id)
     return $array;
 }
 
-
+//Krijgt de data van gebruikers uit de database en geeft het aan de ID
 function getId($username)
 {
     $db = mysqli_connect('localhost', 'festivaluser', 'tsdf8E6f', 'festival');
@@ -34,21 +35,7 @@ function getId($username)
 
 }
 
-//function getOrders($username) {
-//
- //   $db = mysqli_connect('localhost', 'festivaluser', 'tsdf8E6f', 'festival');
-//
-  //  $query = "SELECT * FROM orders WHERE userName = '".$username."'";
-//
-  //  echo $query;
- //   $result = mysqli_query($db, $query);
- //   while($row = mysqli_fetch_assoc($result))
-  //  {
-  //      return json_decode($row['tickets']);
-  //      return $row['userName'];
-   // }
-//}
-
+//Krijgt de data van tickets uit de database en geeft het weer
 function getOrders($username)
 {
     $db = mysqli_connect('localhost', 'festivaluser', 'tsdf8E6f', 'festival');
@@ -59,17 +46,15 @@ function getOrders($username)
     $finalArray = [];
     while($row = mysqli_fetch_assoc($result))
     {
-        //print_r(json_decode($row['tickets']));
         foreach(json_decode($row['tickets']) as $ticket){
             array_push($finalArray, $ticket);
         }
  
     }
-
-    //print_r($finalArray);
     return $finalArray;
 }
 
+//Krijgt de data van tickets - datum uit de database en geeft het weer
 function getDatum($username1)
 {
     $db = mysqli_connect('localhost', 'festivaluser', 'tsdf8E6f', 'festival');
