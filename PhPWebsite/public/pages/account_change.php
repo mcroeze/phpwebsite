@@ -25,8 +25,15 @@ if (isset($_POST['update'])) {
 
     // Hier wordt de gebruiker geupdate
 
-    $query = "UPDATE gebruikers SET cusername='" . $_POST['cusername'] . "'
-    WHERE id='$_SESSION[cusername]'";
+    $query = "UPDATE gebruikers SET 
+    cfirstname='" . $_POST['cfirstname'] . "',
+    clastname='" . $_POST['clastname'] . "',
+    cphonenumber='" . $_POST['cphonenumber'] . "',
+    cemail='" . $_POST['cemail'] . "',
+    cadress='" . $_POST['cadress'] . "'
+
+    WHERE cusername='" . $_SESSION['cusername'] . "'"; 
+   
     mysqli_query($db, $query);
     $_SESSION['cusername'] = $username;
     $_SESSION['success'] = "Succesvol aangepast!";
@@ -54,14 +61,14 @@ if(isset($_SESSION['cusername']))
     <h1 class="loginh1">Update Profile</h1>
     <p class="loginp">Vul hier je nieuwe gegevens in</p>
 
-  <form method="post" action="profile.php"> 
+  <form method="post" action="#"> 
   <?php include('../database/errors.php'); ?>
 
      <label for="input-group"></label>
     <div class="iconContainer">
       <i class="fa fa-user icon"></i>
 <p>Gebruikersnaam</p>
-      <input type="text" name="cusername" style="padding-left: 40px;" value="<?php echo $usersData['cusername']; ?>">
+      <input type="text" readonly="readonly" name="cusername" style="padding-left: 40px;" value="<?php echo $usersData['cusername']; ?>">
     </div>
 
     <label for="input-group"></label>

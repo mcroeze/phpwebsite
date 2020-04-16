@@ -129,8 +129,13 @@ if(isset($_GET["action"]))
                     ?>
                     
                 </table>
-                    <?php 
-                    echo "<a class=wijzigingslink href=profile.php>Bevestig Bestelling</a>";
+				<form method="post" action="orders.php">
+				<input type="submit" class="wijzigingslink" value="Bevestig Bestelling" style="
+    max-width: 10%;
+">
+					
+				</form>
+   <?php              
 }  else {
      echo "<h1>Je moet eerst inloggen om tickets te bestellen</h1>";
 }
